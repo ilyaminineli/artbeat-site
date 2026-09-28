@@ -37,3 +37,68 @@ h2{font-size:clamp(3rem,6.2vw,6rem);font-weight:600}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-card{min-height:390px;padding:38px;border:1px solid var(--line);display:flex;flex-direction:column;justify-content:flex-end}.contact-card-dark{background:var(--dark);color:#fff;border-color:var(--dark)}.contact-card-dark .eyebrow{color:#aaa69c}.contact-card h2{font-size:clamp(2.5rem,5vw,5rem);margin-bottom:24px}.contact-card p{max-width:500px;color:#555047}.contact-card-dark p{color:#d2cec4}.big-link{font:600 clamp(2rem,4.8vw,5.2rem)/.96 "Space Grotesk";letter-spacing:-.05em;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}.link-stack{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.contact-note{margin-top:28px!important;font-size:.84rem;color:var(--muted)!important}
 @media(max-width:920px){.hero{grid-template-columns:1fr;min-height:auto;padding-top:58px}.hero-collage{min-height:520px;margin-top:22px}.section-heading,.about-section,.orders-section{grid-template-columns:1fr;gap:38px}.artist-card,.artist-card-large,.artist-card-wide{grid-column:span 6}.contact-grid{grid-template-columns:1fr}.catalogue-row{grid-template-columns:1fr 1fr}.video-heading{align-items:start;flex-direction:column}}
 @media(max-width:650px){.site-header{padding:14px 18px}.brand,.brand img{width:145px}nav{gap:14px;font-size:.62rem}.hero{padding:48px 18px 75px}.section{padding:76px 18px}.hero-collage{min-height:420px}.hero-photo-a{width:65%;height:285px}.hero-photo-b{width:54%;height:245px}.hero-photo-c{width:59%;height:255px}.hero-mark{width:68px;height:68px;font-size:1.7rem}.artist-grid{display:block}.artist-card,.artist-card-large,.artist-card-wide{min-height:285px;margin-bottom:12px}.artist-overlay{padding:17px 16px 15px}.artist-overlay strong{font-size:1.1rem}.orders-section{padding-left:18px;padding-right:18px}.site-footer{grid-template-columns:1fr;gap:18px}.footer-links{justify-content:flex-start}.catalogue-row{grid-template-columns:1fr;gap:24px;padding:40px 0}.catalogue-row img{aspect-ratio:1.35/1}.inner-hero{padding-top:50px}.contact-card{min-height:320px;padding:26px}}
+/* Final brand + mobile navigation refinement */
+.site-header{background:var(--dark);border-bottom-color:#2a2927;color:#fff;box-shadow:0 8px 30px rgba(0,0,0,.08)}
+.site-header.is-scrolled{background:rgba(23,23,22,.97);border-bottom-color:#393735}
+.brand{width:205px;display:flex;align-items:center}.brand img{width:205px;max-width:100%;height:auto}
+nav a{color:#fff;opacity:.72}.nav a:hover{opacity:1}
+.menu-toggle{display:none;border:1px solid #4b4944;background:transparent;color:#fff;min-height:42px;padding:0 12px;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:.12em;font:700 .62rem "DM Sans",sans-serif;cursor:pointer}
+.menu-toggle span{display:block;width:15px;height:1px;background:#fff;transition:transform .2s ease,opacity .2s ease}
+.menu-toggle b{font-weight:700}
+.site-footer{background:var(--dark);color:#aaa69c;border-top:0;max-width:none;padding-left:max(calc((100vw - var(--max))/2 + 4vw),24px);padding-right:max(calc((100vw - var(--max))/2 + 4vw),24px)}
+.site-footer .footer-brand img{width:180px}
+.site-footer .footer-links a{color:#fff}
+@media(max-width:780px){
+  .site-header{position:sticky;padding:12px 16px}
+  .brand,.brand img{width:155px}
+  .menu-toggle{display:flex}
+  .site-header nav{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 14px;background:var(--dark);border-bottom:1px solid #34322f;box-shadow:0 18px 34px rgba(0,0,0,.16);opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .2s ease,transform .2s ease}
+  .site-header.menu-open nav{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .site-header nav a{padding:15px 4px;border-top:1px solid #34322f;font-size:.7rem}
+  .site-header.menu-open .menu-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .site-header.menu-open .menu-toggle span:nth-child(2){opacity:0}
+  .site-header.menu-open .menu-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .menu-toggle b{font-size:0}
+  .menu-toggle b:after{content:"Menu";font-size:.62rem}
+  .hero{padding:40px 16px 62px;gap:32px}
+  h1{font-size:clamp(3.5rem,16vw,5.8rem);letter-spacing:-.065em}
+  h2{font-size:clamp(2.35rem,11vw,4.4rem)}
+  .hero-intro>p:not(.eyebrow){font-size:1rem;margin:22px 0 26px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:8px}
+  .button{width:100%}
+  .hero-collage{min-height:390px;margin:4px 3px 0}
+  .hero-photo-a{left:0;top:40px;width:66%;height:260px;transform:rotate(-3deg)}
+  .hero-photo-b{right:0;top:0;width:54%;height:235px;transform:rotate(4deg)}
+  .hero-photo-c{right:6%;bottom:0;width:59%;height:230px;transform:rotate(-1deg)}
+  .hero-mark{left:8%;bottom:7%;width:62px;height:62px;font-size:1.5rem;box-shadow:7px 8px 0 rgba(0,0,0,.09)}
+  .section{padding:64px 16px}
+  .section-heading{gap:22px;margin-bottom:30px}
+  .section-note{font-size:.88rem}
+  .artist-grid{display:grid;grid-template-columns:1fr;gap:10px}
+  .artist-card,.artist-card-large,.artist-card-wide{grid-column:auto;min-height:300px;margin:0}
+  .artist-card-large{min-height:340px}
+  .artist-overlay{padding:18px 16px 16px}
+  .artist-overlay strong{font-size:1.02rem}
+  .about-section{gap:28px}
+  .about-copy p{font-size:1rem;margin-bottom:18px}
+  .orders-section{padding:64px 16px}
+  .order-steps>div{grid-template-columns:42px 1fr;padding:20px 0}
+  .order-steps strong{font-size:1rem}
+  .order-steps p{font-size:.85rem}
+  .site-footer{grid-template-columns:1fr;padding:30px 16px 36px;gap:18px}
+  .site-footer .footer-brand img{width:155px}
+  .footer-links{justify-content:flex-start;gap:10px 16px}
+  .inner-hero{padding-top:48px;padding-bottom:64px}
+  .inner-hero h1{font-size:clamp(3.5rem,16vw,5.8rem)}
+  .video-heading{gap:20px;margin-bottom:22px}
+  .video-frame{aspect-ratio:16/10}
+  .catalogue-row{grid-template-columns:1fr;gap:18px;padding:38px 0}
+  .catalogue-row img{aspect-ratio:1.25/1}
+  .catalogue-row h2{font-size:clamp(2rem,10vw,3.7rem);margin:9px 0 14px}
+  .contact-grid{gap:12px}
+  .contact-card{min-height:310px;padding:24px}
+  .big-link{font-size:clamp(2rem,12vw,4rem)}
+}
+@media(min-width:781px){
+  .site-header .menu-toggle{display:none!important}
+}
